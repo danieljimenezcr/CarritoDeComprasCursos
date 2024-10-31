@@ -9,7 +9,11 @@ let articulosCarrito = [];
 cargarEventListeners()
 function cargarEventListeners() {
     listaCursos.addEventListener('click', agregarCurso); //Agreagar curso al carrito dar click.
-    carrito.addEventListener('click', eliminarCurso);
+    carrito.addEventListener('click', eliminarCurso); //Elimina curso agregado
+    vaciarCarritoBtn.addEventListener('click', () => {
+        articulosCarrito = []; // Reset al arreglo
+        limpiarHTML(); //Limpiar el HTML que muestra los cursos agregados
+    })
 }
 
 
